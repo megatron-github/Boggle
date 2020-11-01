@@ -24,9 +24,6 @@ def no_newlines(strings):
     """ Make a list of words, in which the word
         are not placed in the row style. """
 
-    # Cite: Alistair Campbell
-    # Desc: The code for editing a text file
-
     result = []
     for item in strings:
         result.append(item[:-1])
@@ -36,9 +33,6 @@ def uppercase_all(strings):
     """ Make all letters of a word uppercased, and do
         it for every word. """
 
-    # Cite: Alistair Campbell
-    # Desc: The code for editing a text file
-
     result = []
     for item in strings:
         result.append(item.upper())
@@ -47,9 +41,6 @@ def uppercase_all(strings):
 def get_dictionary():
     """ Open the text profile, and edit it to make it
         usable for the game. """
-
-    # Cite: Alistair Campbell
-    # Desc: The code for editing a text file
 
     file = open("dictionary.txt")
     lines = file.readlines()
@@ -625,9 +616,6 @@ class Game:
         """ Activate the current player by using the 
             index from the new going-to-play player """
 
-        # Cite: Alistair Campbell
-        # Desc: The code for activate the current player
-
         # Deactivate all player, then only activate the
         # player that is found the current player's index
         for player in self._players:
@@ -693,11 +681,6 @@ class Game:
         """ Givign a certain time for a player to play their turn
             before the program shut down. """
 
-        # Cite: Chiara Bondi
-        # Desc: The idea of the timming of the game and the choosing
-        # words can be run seperately; and the idea of calling a
-        # self.method in another self.method
-
         # Run the sand timmer, while delay the processing of 
         # the program for a minute
         RunWithYieldDelay(self._win, self._timer.tik_tok())
@@ -711,10 +694,6 @@ class Game:
             the achievement of that player into a Master list.
             Then empty the list of words, then change turn for 
             a new player to play. """
-
-        # Cite: Chiara Bondi
-        # Desc: The idea of storing the list of words and the player
-        # identity together to make the future process easier.
 
         # Find the current player and store their identity with their
         # founded words into a Master list.
@@ -739,11 +718,6 @@ class Game:
     def neighbor_only(self, recent):
         """ Check if the new selected tile is a neighbor
             of the previous selected tile. """
-
-        # Cite: Lucas Barusek
-        # Desc: The idea of looking for neighbor by 
-        # comparing the location of the new selected
-        # tile to the previous tile's neighbors' locations
 
         # If the list of neighbors is empty (often because of 
         # fisrt letter), record all the neighbors of the first letter
@@ -844,9 +818,6 @@ class Game:
 
     def change_turn(self):
         """ Switch the played player to another player. """
-
-        # Cite: Alistair Campbell
-        # Desc: The code for switching player
 
         # Change the index of the current player.
         self._current_player += 1
@@ -1081,10 +1052,6 @@ def program(win):
     if total_players < 2:
         print("Please, add more players!")
         total_players = int(input("Enter the total number of players: "))
-
-    # Cite: Chiara Bondi
-    # Desc: The idea of getting the amount of players before making 
-    # making the board game. 
 
     # If total player is more than one, create the game board and 
     # add to window
