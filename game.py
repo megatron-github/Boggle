@@ -2,12 +2,6 @@
  *****************************************************************************
    FILE:            game.py
 
-   AUTHOR:          Truong
-
-   ASSIGNMENT:      Project 10: Game: Boggle
-
-   DATE:            11/14/18
-
    DESCRIPTION:     The program create a version of the Boggle board game. It
                     is different from the orginal version because on of the 
                     rule -- if two players submitted the same word, then the 
